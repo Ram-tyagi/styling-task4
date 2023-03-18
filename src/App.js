@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,Fragment} from 'react';
 import Details from './components/UserDetails/Details';
 import UserList from './components/UserDetails/UserList';
  
@@ -10,10 +10,12 @@ setEnteredData((prevList)=>{
 })
   }
   return (
-    <div>
+   <Fragment>
      <Details onAddUser={addUserHandler}/>
      <UserList users={enteredData}/>
-    </div>
+  
+   </Fragment>
+    
   );
 }
 
